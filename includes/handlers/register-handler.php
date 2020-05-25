@@ -1,5 +1,4 @@
 <?php
-
 	function filterFormName($inputText) {
 		$inputText = strip_tags($inputText);
 		$inputText = ucfirst(strtolower($inputText));
@@ -26,12 +25,14 @@
 		$password = filterFormPassword($_POST['registerPassword']);
 		$confirmPassword = filterFormPassword($_POST['registerConfirmPassword']);
 		$dob = $_POST['registerDOB'];
-		$gender = $_POST['registerGender'];
+		if(isset($_POST['registerGender']))		// gender is an optional field
+			$gender = $_POST['registerGender'];
+		else
+			$gender = NULL;
 
 		$registrationSuccessful = $account->register($username, $firstName, $lastName, $email, $password, $confirmPassword, $dob, $gender);
 
 		if($registrationSuccessful)
 			header("Location: index.php");
 	}
-
 ?>

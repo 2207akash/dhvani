@@ -1,5 +1,4 @@
 <?php
-
 	class Constants {
 		public static $usernameLengthError = "Username must be between 6 and 25 characters";
 		
@@ -13,5 +12,4 @@
 		public static $passwordInvalidError = "Password is invalid";
 		public static $passwordLengthError = "Passwords must be between 8 and 25 characters";
 	}
-
 ?>

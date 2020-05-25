@@ -1,6 +1,5 @@
 <?php
 	class Account {
-
 		private $errorArray;
 
 		public function __construct() {
@@ -79,6 +78,5 @@
 				return;
 			}
 		}
-
 	}
 ?>
