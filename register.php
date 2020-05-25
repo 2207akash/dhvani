@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome to Music-app</title>
+
+	<!-- BOOTSTRAP CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+<body>
+
+	<div id="inputContainer">
+		<form id="loginForm" action="register.php" method="POST">
+			<h2>To continue, log in to Dhvani</h2>
+			<p>
+				<input id="loginUsername" name="loginUsername" type="text" placeholder="Email address or username" required></input>
+			</p>
+			<p>
+				<input id="loginPassword" name="loginPassword" type="password" placeholder="Password" required></input>
+			</p>
+			<button type="submit" name="loginButton">LOG IN</button>
+		</form>
+
+		<form id="registerForm" action="register.php" method="POST">
+			<h2>Create your free account</h2>
+			<p>
+				<input id="registerFirstName" name="registerFirstName" type="text" placeholder="First name" required></input>
+			</p>
+			<p>
+				<input id="registerLastName" name="registerLastName" type="text" placeholder="Last name" required></input>
+			</p>
+			<p>
+				<input id="registerUsername" name="registerUsername" type="text" placeholder="Username" required></input>
+			</p>
+			<p>
+				<input id="registerEmail" name="registerEmail" type="email" placeholder="Email address" required></input>
+			</p>
+			<p>
+				<input id="registerPassword" name="registerPassword" type="password" placeholder="Password" required></input>
+			</p>
+			<p>
+				<input id="registerConfirmPassword" name="registerConfirmPassword" type="password" placeholder="Confirm password" required></input>
+			</p>
+			<p>
+				<label for="registerDOB">Date of birth:</label><br>
+				<input id="registerDOB" name="registerDOB" type="date" required></input>
+			</p>
+			<p>
+				<label for="registerGender">Gender:</label><br>
+				<input id="registerGender" name="registerGender" type="radio" value="M">Male</input>
+				<input id="registerGender" name="registerGender" type="radio" value="F">Female</input>
+				<input id="registerGender" name="registerGender" type="radio" value="O">Other</input>
+			</p>
+			<button type="submit" name="registerButton">SIGN UP</button>
+		</form>
+	</div>
+
+</body>
+</html>
