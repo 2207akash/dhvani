@@ -27,7 +27,11 @@
 		$confirmPassword = filterFormPassword($_POST['registerConfirmPassword']);
 		$dob = $_POST['registerDOB'];
 		$gender = $_POST['registerGender'];
-		
+
+		$registrationSuccessful = $account->register($username, $firstName, $lastName, $email, $password, $confirmPassword, $dob, $gender);
+
+		if($registrationSuccessful)
+			header("Location: index.php");
 	}
 
 ?>

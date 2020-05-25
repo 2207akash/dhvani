@@ -1,17 +1,18 @@
-<?php 
+<?php
 	include("includes/classes/Accounts.php");
-	
+	include("includes/classes/Constants.php");
+
 	$account = new Account();
-	$account->register();
 	
 	include("includes/handlers/register-handler.php");
 	include("includes/handlers/login-handler.php");
+
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Welcome to Music-app</title>
+	<title>Welcome to Dhvani</title>
 
 	<!-- CUSTOM CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
@@ -38,18 +39,25 @@
 			<h2>Sign up with your email address</h2>
 			<p>
 				<input id="registerFirstName" name="registerFirstName" type="text" placeholder="First name" required></input>
+				<?php echo $account->getError(Constants::$firstNameLengthError) ?>
 			</p>
 			<p>
 				<input id="registerLastName" name="registerLastName" type="text" placeholder="Last name" required></input>
+				<?php echo $account->getError(Constants::$lastNameLengthError) ?>
 			</p>
 			<p>
 				<input id="registerUsername" name="registerUsername" type="text" placeholder="Username" required></input>
+				<?php echo $account->getError(Constants::$usernameLengthError) ?>
 			</p>
 			<p>
 				<input id="registerEmail" name="registerEmail" type="email" placeholder="Email address" required></input>
+				<?php echo $account->getError(Constants::$emailInvalidError) ?>
 			</p>
 			<p>
 				<input id="registerPassword" name="registerPassword" type="password" placeholder="Password" required></input>
+				<?php echo $account->getError(Constants::$passwordLengthError) ?>
+				<?php echo $account->getError(Constants::$passwordInvalidError) ?>
+				<?php echo $account->getError(Constants::$passwordsMismatch) ?>
 			</p>
 			<p>
 				<input id="registerConfirmPassword" name="registerConfirmPassword" type="password" placeholder="Confirm password" required></input>
@@ -60,9 +68,9 @@
 			</p>
 			<p>
 				<label for="registerGender">Gender:</label><br>
-				<input id="GenderMale" name="registerGender" type="radio" value="M">Male</input>
-				<input id="GenderFemale" name="registerGender" type="radio" value="F">Female</input>
-				<input id="GenderOther" name="registerGender" type="radio" value="O">Other</input>
+				<input id="GenderMale" name="registerGender" type="radio" value="M" required>Male</input>
+				<input id="GenderFemale" name="registerGender" type="radio" value="F" required>Female</input>
+				<input id="GenderOther" name="registerGender" type="radio" value="O" required>Other</input>
 			</p>
 			<button type="submit" name="registerButton">SIGN UP</button>
 		</form>
