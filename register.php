@@ -1,3 +1,8 @@
+<?php 
+	include("includes/handlers/register-handler.php");
+	include("includes/handlers/login-handler.php");
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +27,7 @@
 		</form>
 
 		<form id="registerForm" action="register.php" method="POST">
-			<h2>Create your free account</h2>
+			<h2>Sign up with your email address</h2>
 			<p>
 				<input id="registerFirstName" name="registerFirstName" type="text" placeholder="First name" required></input>
 			</p>
