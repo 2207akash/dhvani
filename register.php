@@ -1,4 +1,9 @@
 <?php 
+	include("includes/classes/Accounts.php");
+	
+	$account = new Account();
+	$account->register();
+	
 	include("includes/handlers/register-handler.php");
 	include("includes/handlers/login-handler.php");
 ?>
@@ -7,6 +12,9 @@
 <html>
 <head>
 	<title>Welcome to Music-app</title>
+
+	<!-- CUSTOM CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 
 	<!-- BOOTSTRAP CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -52,9 +60,9 @@
 			</p>
 			<p>
 				<label for="registerGender">Gender:</label><br>
-				<input id="registerGender" name="registerGender" type="radio" value="M">Male</input>
-				<input id="registerGender" name="registerGender" type="radio" value="F">Female</input>
-				<input id="registerGender" name="registerGender" type="radio" value="O">Other</input>
+				<input id="GenderMale" name="registerGender" type="radio" value="M">Male</input>
+				<input id="GenderFemale" name="registerGender" type="radio" value="F">Female</input>
+				<input id="GenderOther" name="registerGender" type="radio" value="O">Other</input>
 			</p>
 			<button type="submit" name="registerButton">SIGN UP</button>
 		</form>
