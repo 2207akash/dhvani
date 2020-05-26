@@ -1,12 +1,14 @@
 <?php
 	class Constants {
 		public static $usernameLengthError = "Username must be between 6 and 25 characters";
+		public static $usernameTaken = "Username already exists";
 		
 		public static $firstNameLengthError = "First name must be between 1 and 20 characters";
 		
 		public static $lastNameLengthError = "Username must be between 1 and 20 characters";
 
 		public static $emailInvalidError = "Email address is invalid";
+		public static $emailTaken = "Email address already in use";
 		
 		public static $passwordsMismatch = "Passwords do not match";
 		public static $passwordInvalidError = "Password is invalid";

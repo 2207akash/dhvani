@@ -51,11 +51,13 @@
 				<input id="registerUsername" name="registerUsername" type="text" placeholder="Username" required></input>
 				
 				<?php echo $account->getError(Constants::$usernameLengthError) ?>
+				<?php echo $account->getError(Constants::$usernameTaken) ?>
 			</p>
 			<p>
 				<input id="registerEmail" name="registerEmail" type="email" placeholder="Email address" required></input>
 				
 				<?php echo $account->getError(Constants::$emailInvalidError) ?>
+				<?php echo $account->getError(Constants::$emailTaken) ?>
 			</p>
 			<p>
 				<input id="registerPassword" name="registerPassword" type="password" placeholder="Password" required></input>
