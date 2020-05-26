@@ -8,3 +8,13 @@
 	else
 		header("Location: register.php");
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dhvani</title>
+</head>
+<body>
+	Hello, world!
+</body>
+</html>

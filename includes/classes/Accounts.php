@@ -8,10 +8,10 @@
 			$this->errorArray = Array();
 		}
 
-		public function login($username, $password) {
+		public function login($user, $password) {
 			$encryptedPassword = md5($password);
 			
-			$query = mysqli_query($this->con, "SELECT * FROM users WHERE username='$username' AND password='$encryptedPassword'");
+			$query = mysqli_query($this->con, "SELECT * FROM users WHERE (username='$user' OR email='$user') AND password='$encryptedPassword'");
 
 			if(mysqli_num_rows($query) == 1)
 				return true;
