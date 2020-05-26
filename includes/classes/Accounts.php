@@ -1,8 +1,10 @@
 <?php
 	class Account {
+		private $con;
 		private $errorArray;
 
-		public function __construct() {
+		public function __construct($con) {
+			$this->con = $con;
 			$this->errorArray = Array();
 		}
 
@@ -14,11 +16,20 @@
 			$this->validatePassword($password1, $password2);
 
 			if(empty($this->errorArray)) {
-				//TODO: Insert into DB
-				return true;
+				return $this->insertUserDetails($username, $firstName, $lastName, $email, $password1, $dob, $gender);
 			}
 			else
 				return false;
+		}
+
+		private function insertUserDetails($username, $firstName, $lastName, $email, $password, $dob, $gender) {
+			$encryptedPassword = md5($password);
+			$profilePic = "assets/images/profile-pics/default.png";
+			$date = date("d-m-Y");
+
+			$result = mysqli_query($this->con, "INSERT INTO users VALUES ('', '$username', '$firstName', '$lastName', '$email', '$encryptedPassword', '$dob', '$gender', '$date', '$profilePic')");
+
+			return $result;
 		}
 
 		public function getError($error) {
@@ -68,7 +79,7 @@
 				array_push($this->errorArray, Constants::$passwordsMismatch);
 				return;
 			}
-			if(preg_match('/[A-Za-z0-9?@.]/', $password1)) {
+			if(!preg_match('/[A-Za-z0-9?@.]/', $password1)) {
 				array_push($this->errorArray, Constants::$passwordInvalidError);
 				return;
 			}
