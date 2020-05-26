@@ -1,0 +1,150 @@
+/* ELEMENT SELECTORS */
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+input[type='date'] {
+	color: #000000;
+}
+
+/* ID SELECTORS */
+
+#background {
+	background-color: #584153;
+	background-image: url(../images/bg.jpg);
+	background-position: center;
+	background-size: cover;
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+
+#loginContainer * {
+	color: #ffffff;
+	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-weight: normal;
+	line-height: 3rem;
+	box-sizing: border-box;
+}
+
+#loginContainer {
+	width: 80%;
+	margin: 0 auto;
+	position: relative;
+	max-width: 1024px;
+}
+
+#inputContainer h2 {
+	font-family: 'Lobster', cursive;
+	text-align: center;
+}
+
+#inputContainer button {
+	color: #000000;
+	font-family: 'Bebas Neue', cursive;
+	font-size: 25px;
+	border-radius: 250px;
+	display: block;
+	letter-spacing: 1px;
+	margin: 20px auto;
+	width: 100%;
+}
+
+#inputContainer ::placeholder {
+	font-weight: bold;
+	color: #aaaaaa;
+}
+
+#inputContainer label {
+	font-weight: bold;
+	color: #aaaaaa;
+}
+
+#inputContainer input[type='radio'] {
+	width: 10%;
+}
+
+#inputContainer input[type='text']:hover,
+input[type='password']:hover,
+input[type='email']:hover,
+input[type='date']:hover {
+	background-color: #584153;
+}
+
+#inputContainer input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='date'] {
+	color: #ffffff;
+	display: block;
+	background-color: transparent;
+	border: 0;
+	border-bottom: 1px solid #ffffff;
+	height: 30px;
+	line-height: 27px;
+	width: 100%;
+}
+
+#inputContainer {
+	width: 400px;
+	padding: 45px;
+	float: left;
+	border-right: 1px solid #999999;
+}
+
+/* CLASS SELECTORS */
+
+.input-edit {
+	border-radius: 15px;
+}
+
+.button.two {
+	background-repeat: no-repeat;
+	background-position: -120px -120px, 0 0;
+	background-image: -webkit-linear-gradient(
+    	top left,
+    	rgba(255, 255, 255, 0.2) 0%,
+    	rgba(255, 255, 255, 0.2) 37%,
+    	rgba(255, 255, 255, 0.8) 45%,
+    	rgba(255, 255, 255, 0.0) 50%
+  	);
+  	background-image: -moz-linear-gradient(
+    	0 0,
+    	rgba(255, 255, 255, 0.2) 0%,
+    	rgba(255, 255, 255, 0.2) 37%,
+    	rgba(255, 255, 255, 0.8) 45%,
+    	rgba(255, 255, 255, 0.0) 50%
+  	);    
+  	background-image: -o-linear-gradient(
+	    0 0,
+	    rgba(255, 255, 255, 0.2) 0%,
+	    rgba(255, 255, 255, 0.2) 37%,
+	    rgba(255, 255, 255, 0.8) 45%,
+	    rgba(255, 255, 255, 0.0) 50%
+	);
+  	background-image: linear-gradient(
+    	0 0,
+    	rgba(255, 255, 255, 0.2) 0%,
+    	rgba(255, 255, 255, 0.2) 37%,
+    	rgba(255, 255, 255, 0.8) 45%,
+    	rgba(255, 255, 255, 0.0) 50%
+  	);
+  
+  	-moz-background-size: 250% 250%, 100% 100%;
+    background-size: 250% 250%, 100% 100%;
+  
+  	-webkit-transition: background-position 0s ease;
+    -moz-transition: background-position 0s ease;       
+    -o-transition: background-position 0s ease;
+    transition: background-position 0s ease;
+}
+
+.button.two:hover {
+	background-position: 0 0, 0 0;
+  	-webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
