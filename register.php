@@ -32,6 +32,8 @@
 			<p>
 				<input id="loginPassword" name="loginPassword" type="password" placeholder="Password" required></input>
 			</p>
+
+			<?php echo $account->getError(Constants::$loginFailed) ?>
 			<button type="submit" name="loginButton">LOG IN</button>
 		</form>
 
