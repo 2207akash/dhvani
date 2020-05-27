@@ -1,11 +1,11 @@
 $(document).ready(function() {
 	$("#hideLogin").click(function() {
-		$("#registerForm").show();
 		$("#loginForm").hide();
+		$("#registerForm").show();
 	})
 
 	$("#hideRegister").click(function() {
-		$("#registerForm").hide();
 		$("#loginForm").show();
+		$("#registerForm").hide();
 	})
 })

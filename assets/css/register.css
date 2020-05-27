@@ -22,6 +22,11 @@ input[type='date'] {
 	width: 100%;
 }
 
+#loginForm,
+#registerForm {
+	display: none;
+}
+
 #loginContainer * {
 	color: #ffffff;
 	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -64,7 +69,7 @@ input[type='date'] {
 }
 
 #inputContainer input[type='radio'] {
-	width: 10%;
+	width: 8%;
 }
 
 #inputContainer input[type='text']:hover,

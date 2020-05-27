@@ -22,7 +22,6 @@
 
 	<!-- CUSTOM CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/register.css">
-	
 </head>
 <body>
 	<div id="background">
@@ -97,16 +96,33 @@
 						<span id="hideRegister">Already have an account? Login here</span>
 					</div>
 				</form>
-
 			</div>
 		</div>
 	</div>
 
 	<!-- JQUERY -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+	
 	<!-- CUSTOM JS -->
 	<script src="assets/js/register.js"></script>
-
+	<?php 
+		if(isset($_POST['registerButton'])) {
+			echo '<script>
+					$(document).ready(function() {
+						$("#loginForm").hide();
+						$("#registerForm").show();
+					})
+				</script>';
+		}
+		else {
+			echo '<script>
+					$(document).ready(function() {
+						$("#loginForm").show();
+						$("#registerForm").hide();
+					})
+				</script>';
+		}
+	?>
+	
 </body>
 </html>
