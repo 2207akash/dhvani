@@ -40,6 +40,10 @@
 
 					<?php echo $account->getError(Constants::$loginFailed) ?>
 					<button class="btn btn-danger button two" type="submit" name="loginButton">LOG IN</button>
+
+					<div class="hasAccountText">
+						<span id="hideLogin">Don't have an account yet? Sign up here</span>
+					</div>
 				</form>
 				
 				<!-- REGISTER FORM -->
@@ -88,10 +92,21 @@
 						<input id="genderOther" name="registerGender" type="radio" value="O">Other</input>
 					</p>
 					<button class="btn btn-danger text-dark button two" type="submit" name="registerButton">SIGN UP</button>
+
+					<div class="hasAccountText">
+						<span id="hideRegister">Already have an account? Login here</span>
+					</div>
 				</form>
 
 			</div>
 		</div>
 	</div>
+
+	<!-- JQUERY -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- CUSTOM JS -->
+	<script src="assets/js/register.js"></script>
+
 </body>
 </html>

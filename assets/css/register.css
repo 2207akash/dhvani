@@ -95,10 +95,21 @@ input[type='date'] {
 	border-right: 1px solid #999999;
 }
 
+#hideLogin,
+#hideRegister {
+    font-weight: bold;
+    font-size: 12px
+}
+
 /* CLASS SELECTORS */
 
 .input-edit {
 	border-radius: 15px;
+}
+
+.hasAccountText {
+	text-align: center;
+	cursor: pointer;
 }
 
 .button.two {
