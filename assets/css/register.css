@@ -34,14 +34,14 @@ input[type='date'] {
 }
 
 #rightText h1 {
-	color: #f6eedf;
+	color: #f1ebbb;
 	font-size: 55px;
 	font-weight: bold;
 	line-height: 60px;
 }
 
 #rightText h2 {
-	color: #f6eedf;
+	color: #ffdcb4;
 	font-size: 25px;
 	font-weight: bold;
 	margin: 35px 0;
@@ -52,9 +52,10 @@ input[type='date'] {
 }
 
 #rightText li {
-	color: #dbdbdb;
+	color: #f7f7f7;
 	font-family: 'Cantarell', sans-serif;
 	font-size: 20px;
+	font-weight: bold;
 	list-style-type: none;
 	line-height: 35px;
 	padding: 5px 50px;
