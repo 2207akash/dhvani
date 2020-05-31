@@ -16,6 +16,6 @@
 		public static $passwordLengthError = "Passwords must be between 8 and 25 characters";
 
 		// LOGIN ERRORS
-		public static $loginFailed = "Username/email or password entered is incorrect";
+		public static $loginFailed = "Username / email or password entered is incorrect";
 	}
 ?>

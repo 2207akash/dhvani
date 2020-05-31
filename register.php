@@ -7,6 +7,11 @@
 	
 	include("includes/handlers/register-handler.php");
 	include("includes/handlers/login-handler.php");
+
+	function getInputValue($input) {
+		if(isset($_POST[$input]))
+			echo $_POST[$input];
+	}
 ?>
 
 <!DOCTYPE html>
@@ -31,13 +36,16 @@
 				<form class="form-group" id="loginForm" action="register.php" method="POST">
 					<h2 class="heading2">To continue, log in to Dhvani</h2>
 					<p>
-						<input class="form-control input-edit" id="loginUsername" name="loginUsername" type="text" placeholder="Email address or username" required></input>
+						<input class="form-control input-edit" id="loginUsername" name="loginUsername" type="text" placeholder="Email address or username" value="<?php getInputValue('loginUsername') ?>" required></input>
 					</p>
 					<p>
 						<input class="form-control input-edit" id="loginPassword" name="loginPassword" type="password" placeholder="Password" required></input>
 					</p>
 
-					<?php echo $account->getError(Constants::$loginFailed) ?>
+					<span class="errorMessage">
+						<?php echo $account->getError(Constants::$loginFailed) ?>
+					</span>
+
 					<button class="btn btn-danger button two" type="submit" name="loginButton">LOG IN</button>
 
 					<div class="hasAccountText">
@@ -49,33 +57,39 @@
 				<form class="form-group" id="registerForm" action="register.php" method="POST">
 					<h2 class="heading2">Sign up with your email address</h2>
 					<p>
-						<input class="form-control input-edit" id="registerFirstName" name="registerFirstName" type="text" placeholder="First name" required></input>
+						<input class="form-control input-edit" id="registerFirstName" name="registerFirstName" type="text" placeholder="First name" value="<?php getInputValue('registerFirstName') ?>" required></input>
 
-						<?php echo $account->getError(Constants::$firstNameLengthError) ?>
+						<span class="errorMessage">
+							<?php echo $account->getError(Constants::$firstNameLengthError) ?>
+						</span>
 					</p>
 					<p>
-						<input class="form-control input-edit" id="registerLastName" name="registerLastName" type="text" placeholder="Last name" required></input>
-						
-						<?php echo $account->getError(Constants::$lastNameLengthError) ?>
+						<input class="form-control input-edit" id="registerLastName" name="registerLastName" type="text" placeholder="Last name" value="<?php getInputValue('registerLastName') ?>" required></input>
+						<span class="errorMessage">
+							<?php echo $account->getError(Constants::$lastNameLengthError) ?>
+						</span>
 					</p>
 					<p>
-						<input class="form-control input-edit" id="registerUsername" name="registerUsername" type="text" placeholder="Username" required></input>
-						
-						<?php echo $account->getError(Constants::$usernameLengthError) ?>
-						<?php echo $account->getError(Constants::$usernameTaken) ?>
+						<input class="form-control input-edit" id="registerUsername" name="registerUsername" type="text" placeholder="Username" value="<?php getInputValue('registerUsername') ?>" required></input>
+						<span class="errorMessage">
+							<?php echo $account->getError(Constants::$usernameLengthError) ?>
+							<?php echo $account->getError(Constants::$usernameTaken) ?>
+						</span>
 					</p>
 					<p>
-						<input class="form-control input-edit" id="registerEmail" name="registerEmail" type="email" placeholder="Email address" required></input>
-						
-						<?php echo $account->getError(Constants::$emailInvalidError) ?>
-						<?php echo $account->getError(Constants::$emailTaken) ?>
+						<input class="form-control input-edit" id="registerEmail" name="registerEmail" type="email" placeholder="Email address" value="<?php getInputValue('registerEmail') ?>" required></input>
+						<span class="errorMessage">
+							<?php echo $account->getError(Constants::$emailInvalidError) ?>
+							<?php echo $account->getError(Constants::$emailTaken) ?>
+						</span>
 					</p>
 					<p>
 						<input class="form-control input-edit" id="registerPassword" name="registerPassword" type="password" placeholder="Password" required></input>
-						
-						<?php echo $account->getError(Constants::$passwordLengthError) ?>
-						<?php echo $account->getError(Constants::$passwordInvalidError) ?>
-						<?php echo $account->getError(Constants::$passwordsMismatch) ?>
+						<span class="errorMessage">
+							<?php echo $account->getError(Constants::$passwordLengthError) ?>
+							<?php echo $account->getError(Constants::$passwordInvalidError) ?>
+							<?php echo $account->getError(Constants::$passwordsMismatch) ?>
+						</span>
 					</p>
 					<p>
 						<input class="form-control input-edit" id="registerConfirmPassword" name="registerConfirmPassword" type="password" placeholder="Confirm password" required></input>
