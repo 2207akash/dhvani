@@ -15,7 +15,7 @@
 	<title>Listen to your heart - Dhvani</title>
 
 	<!-- GOOGLE FONTS -->
-	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Cantarell&display=swap" rel="stylesheet">
 
 	<!-- BOOTSTRAP CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -97,6 +97,20 @@
 					</div>
 				</form>
 			</div>
+			<div id="rightText">
+				<h1>Get great music, right now</h1>
+				<h2>Millions of songs. No credit card needed.</h2>
+				<ul>
+					<li>Discover music you'll fall in love with</li>
+					<li>Enjoy personalized playlists made just for you</li>
+					<li>Follow your favorite artists</li>
+					<li>Enjoy non-stop music and stay streamed</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="icons8">
+			<a target="_blank" href="https://icons8.com/icons/set/checkmark">Checkmark icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 		</div>
 	</div>
 

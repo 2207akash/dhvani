@@ -27,6 +27,42 @@ input[type='date'] {
 	display: none;
 }
 
+#rightText {
+    padding: 45px;
+    display: table-cell;
+    padding-left: 100px;
+}
+
+#rightText h1 {
+	color: #f6eedf;
+	font-size: 55px;
+	font-weight: bold;
+	line-height: 60px;
+}
+
+#rightText h2 {
+	color: #f6eedf;
+	font-size: 25px;
+	font-weight: bold;
+	margin: 35px 0;
+}
+
+#rightText ul {
+	padding: 0;
+}
+
+#rightText li {
+	color: #dbdbdb;
+	font-family: 'Cantarell', sans-serif;
+	font-size: 20px;
+	list-style-type: none;
+	line-height: 35px;
+	padding: 5px 50px;
+	background: url(../images/icons/checkmark_white.png);
+	background-size: 40px;
+	background-repeat: no-repeat;
+}
+
 #loginContainer * {
 	color: #ffffff;
 	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -163,4 +199,11 @@ input[type='date'] {
   	-webkit-transition-duration: 0.5s;
     -moz-transition-duration: 0.5s;
     transition-duration: 0.5s;
+}
+
+.icons8 {
+	position: absolute;
+	bottom: 5px;
+	right: 10px;
+	font-size: 10px;
 }
