@@ -14,7 +14,7 @@ html, body {
 /* ID SELECTORS */
 
 #nowPlayingBarContainer {
-    background-color: #562349;
+    background-color: #ad6989;
     width: 100%;
     display: block;
     bottom: 0;
@@ -46,6 +46,20 @@ html, body {
 	display: flex;
 	flex-direction: column;
 	align-items: center; 
+}
+
+#topContainer {
+	min-height: 100%;
+	width: 100%;
+}
+
+#navBarContainer {
+	background-color: #562349;
+	width: 220px;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
 }
 
 /* CLASS SELECTORS */
@@ -155,4 +169,16 @@ html, body {
 
 .volumeBar .progressBar {
 	width: 125px;
+}
+
+.navBar {
+	padding: 25px;
+	display: flex;
+	flex-direction: column;
+	-ms-flex-direction: column;
+}
+
+.logo img {
+	width: 50px;
+	height: 50px;
 }
