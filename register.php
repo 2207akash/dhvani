@@ -124,7 +124,7 @@
 		</div>
 		
 		<div class="icons8">
-			<a target="_blank" href="https://icons8.com/icons/set/checkmark">Checkmark icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+			<a target="_blank" href="https://icons8.com/">Icons by Icons8</a>
 		</div>
 	</div>
 

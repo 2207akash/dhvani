@@ -15,7 +15,7 @@ html, body {
 
 #nowPlayingBar {
 	display: flex;
-	height: 90px;
+	height: 100px;
 	padding: 16px;
 	box-sizing: border-box;
 }
@@ -32,4 +32,34 @@ html, body {
 	display: flex;
 	flex-direction: column;
 	align-items: center; 
+}
+
+#nowPlayingBar .content {
+	width: 100%;
+}
+
+.playerControls .buttons {
+	margin: 0 auto;
+	display: table;
+}
+
+.controlButton {
+	background-color: transparent;
+	border: none;
+	vertical-align: middle;
+}
+
+.controlButton img {
+	width: 25px;
+	height: 25px;
+}
+
+.controlButton.play img,
+.controlButton.pause img {
+	width: 35px;
+	height: 35px;
+}
+
+.controlButton:hover {
+	cursor: pointer;
 }

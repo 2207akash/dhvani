@@ -209,8 +209,9 @@ input[type='date'] {
 }
 
 .icons8 {
-	position: absolute;
+	right: 5px;
 	bottom: 5px;
-	right: 10px;
+	position: absolute;
 	font-size: 10px;
+	padding: 3px;
 }
