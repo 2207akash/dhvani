@@ -34,7 +34,7 @@ input[type='date'] {
 }
 
 #rightText h1 {
-	color: #f1ebbb;
+	color: #f7f7f7;
 	font-size: 55px;
 	font-weight: bold;
 	line-height: 60px;
@@ -55,7 +55,7 @@ input[type='date'] {
 	color: #f7f7f7;
 	font-family: 'Cantarell', sans-serif;
 	font-size: 20px;
-	font-weight: bold;
+	font-weight: 500;
 	list-style-type: none;
 	line-height: 35px;
 	padding: 5px 50px;
