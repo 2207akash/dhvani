@@ -16,10 +16,23 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 </head>
 <body>
+
 	<div id="nowPlayingBarContainer">
 		<div id="nowPlayingBar">
 			<div id="nowPlayingLeft">
-				
+				<div class="content">
+					<span class="albumLink">
+						<img class="albumArtwork" src="assets/images/default-album.jpg">
+					</span>
+					<div class="trackInfo">
+						<span class="trackName">
+							Love Me Like You Do
+						</span>
+						<span class="artistName">
+							Ellie Goulding
+						</span>
+					</div>
+				</div>
 			</div>
 
 			<div id="nowPlayingCenter">
@@ -65,9 +78,20 @@
 			</div>
 
 			<div id="nowPlayingRight">
-				
+				<div class="volumeBar">
+					<button class="controlButton volume" title="Volume">
+						<img src="assets/images/icons/speaker.png" alt="Volume">
+					</button>
+					
+					<div class="progressBar">
+						<div class="progressBarBg">
+							<div class="progress"></div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>	
 	</div>
+
 </body>
 </html>
