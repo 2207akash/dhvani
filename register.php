@@ -118,7 +118,7 @@
 					<li>Discover music you'll fall in love with</li>
 					<li>Enjoy personalized playlists made just for you</li>
 					<li>Follow your favorite artists</li>
-					<li>Enjoy non-stop music and stay streamed</li>
+					<li>Listen to non-stop music and stay streamed</li>
 				</ul>
 			</div>
 		</div>

@@ -13,8 +13,23 @@
 <html>
 <head>
 	<title>Dhvani</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 </head>
 <body>
-	Hello, world!
+	<div id="nowPlayingBarContainer">
+		<div id="nowPlayingBar">
+			<div id="nowPlayingLeft">
+				
+			</div>
+
+			<div id="nowPlayingCenter">
+				
+			</div>
+
+			<div id="nowPlayingRight">
+				
+			</div>
+		</div>	
+	</div>
 </body>
 </html>
