@@ -1,9 +1,14 @@
 /*	ID SELECTORS */
-
 html, body {
 	margin: 0;
 	padding: 0;
 	height: 100%;
+}
+
+body {
+	background-color: #f6f1ed;
+	font-size: 14px;
+	min-width: 720px;
 }
 
 * {
@@ -14,7 +19,7 @@ html, body {
 /* ID SELECTORS */
 
 #nowPlayingBarContainer {
-    background-color: #ad6989;
+    background-color: #342b38;
     width: 100%;
     display: block;
     bottom: 0;
@@ -54,12 +59,23 @@ html, body {
 }
 
 #navBarContainer {
-	background-color: #562349;
+	background-color: #654062;
 	width: 220px;
 	height: 100vh;
 	position: fixed;
 	top: 0;
 	left: 0;
+}
+
+#mainViewContainer {
+	margin-left: 220px;
+	padding-bottom: 90px;
+	width: calc(100% - 220px);
+}
+
+#mainContent * {
+	color: #000000;
+	padding: 0 20px;
 }
 
 /* CLASS SELECTORS */
@@ -179,8 +195,8 @@ html, body {
 }
 
 .logo img {
-	width: 50px;
-	height: 50px;
+	width: 60px;
+	padding-bottom: 10px;
 }
 
 .navBar .group {
@@ -210,4 +226,21 @@ html, body {
     right: 0;
     top: 6px;
     width: 25px;
+}
+
+.pageHeading {
+	padding: 20px;
+	text-align: center;
+}
+
+.gridViewItem {
+	display: inline-block;
+	margin-right: 20px;
+	width: 29%;
+	max-width: 200px;
+	min-width: 150px;
+}
+
+.gridViewItem img {
+	width: 100%;
 }

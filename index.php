@@ -1,30 +1,26 @@
-<?php 
-	include("includes/config.php");
+<?php include("includes/header.php") ?>
 
-	//session_destroy();
+<h1 class="pageHeading">You might also like</h1>
 
-	if(isset($_SESSION['userLoggedIn']))
-		$userLoggedIn = $_SESSION['userLoggedIn'];
-	else
-		header("Location: register.php");
-?>
+<div class="gridViewContainer">
+	
+	<?php 
+		$albumQuery = mysqli_query($con, "SELECT * FROM albums ORDER BY RAND() LIMIT 10");
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Dhvani</title>
-	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-</head>
-<body>
-	<div id="mainContainer">
+		while($row = mysqli_fetch_array($albumQuery)) {
+			echo "<div class='gridViewItem'>
 
-		<div id="topContainer">
-			<?php include("includes/navBarContainer.php"); ?>
-		</div>
+					<img src='" . $row['artworkPath'] . "'>
 
-		<?php include("includes/nowPlayingBarContainer.php"); ?>
+					<div class='gridViewInfo'>"
+						. $row['title'] .
 
-	</div>
+					"</div>
 
-</body>
-</html>
+				</div>";
+		}
+	?>
+
+</div>
+
+<?php include("includes/footer.php") ?>
