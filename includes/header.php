@@ -13,7 +13,13 @@
 <html>
 <head>
 	<title>Dhvani</title>
+	
+	<!-- CUSTOM CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	
 </head>
 <body>
 	<div id="mainContainer">
