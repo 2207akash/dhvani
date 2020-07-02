@@ -78,6 +78,10 @@ body {
 	padding: 0 20px;
 }
 
+#mainContent {
+	color: #000;
+}
+
 /* CLASS SELECTORS */
 
 #nowPlayingBar .content {
@@ -259,5 +263,4 @@ body {
 
 .gridViewItem a {
 	text-decoration: none;
-	display: block;
 }
