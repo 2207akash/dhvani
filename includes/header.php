@@ -23,6 +23,8 @@
 	<!-- GOOGLE FONTS -->
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 	
+	<!-- CUSTOM JS -->
+	<script src="assets/js/script.js"></script>
 </head>
 <body>
 	<div id="mainContainer">
