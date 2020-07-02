@@ -20,10 +20,30 @@
 	});
 
 	function setTrack(trackId, newPlaylist, play) {
-		audioElement.setTrack();
+
+		$.post("includes/handlers/ajax/getSongJSON.php", { songId: trackId }, function(data) {
+			var track = JSON.parse(data);
+
+			audioElement.setTrack(track.path);
+			audioElement.play();
+		});
+
+		audioElement.setTrack("assets/music/bensound-acousticbreeze.mp3");
 		
 		if(play)
 			audioElement.play();
+	}
+
+	function playSong() {
+		$(".controlButton.play").hide();
+		$(".controlButton.pause").show();
+		audioElement.play();
+	}
+
+	function pauseSong() {
+		$(".controlButton.pause").hide();
+		$(".controlButton.play").show();
+		audioElement.pause();
 	}
 
 </script>
@@ -57,11 +77,11 @@
 						<img src="assets/images/icons/prev.png" alt="Previous">
 					</button>
 
-					<button class="controlButton play" title="Play">
+					<button class="controlButton play" title="Play" onclick="playSong()">
 						<img src="assets/images/icons/play.png" alt="Play">
 					</button>
 
-					<button class="controlButton pause" title="Pause" style="display: none">
+					<button class="controlButton pause" title="Pause" style="display: none" onclick="pauseSong()">
 						<img src="assets/images/icons/pause.png" alt="Pause">
 					</button>
 
