@@ -23,18 +23,20 @@
 
 		$.post("includes/handlers/ajax/getSongJSON.php", { songId: trackId }, function(data) {
 			var track = JSON.parse(data);
-
 			$("#nowPlayingLeft .trackInfo .trackName").text(track.title);
 
 			$.post("includes/handlers/ajax/getArtistJSON.php", { artistId: track.artist }, function(data) {
 				var artist = JSON.parse(data);
-
 				$("#nowPlayingLeft .trackInfo .artistName").text(artist.name);
+			});
 
+			$.post("includes/handlers/ajax/getAlbumJSON.php", { albumId: track.album }, function(data) {
+				var album = JSON.parse(data);
+				$("#nowPlayingLeft .albumLink .albumArtwork").attr("src", album.artworkPath);
 			});
 
 			audioElement.setTrack(track.path);
-			audioElement.play();
+			audioElement.play();			
 		});
 		
 		if(play)
@@ -60,7 +62,7 @@
 		<div id="nowPlayingLeft">
 			<div class="content">
 				<span class="albumLink">
-					<img class="albumArtwork" src="assets/images/default-album.jpg">
+					<img class="albumArtwork" src="">
 				</span>
 				<div class="trackInfo">
 					<span class="trackName"></span>
