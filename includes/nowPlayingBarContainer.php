@@ -83,13 +83,19 @@
 		setTrack(trackToPlay, currentPlaylist, true);
 	}
 
+	function setRepeat() {
+		repeat = !repeat;
+		var imageName = repeat ? "repeat-active.png" : "repeat.png";
+		$(".controlButton.repeat img").attr("src", "assets/images/icons/" + imageName);
+	}
+
 	function setTrack(trackId, newPlaylist, play) {
 
 		currentIndex = currentPlaylist.indexOf(trackId);
 		pauseSong();
 
 		$.post("includes/handlers/ajax/getSongJSON.php", { songId: trackId }, function(data) {
-			
+
 			var track = JSON.parse(data);
 			$("#nowPlayingLeft .trackInfo .trackName").text(track.title);
 
@@ -166,7 +172,7 @@
 						<img src="assets/images/icons/next.png" alt="Next">
 					</button>
 
-					<button class="controlButton repeat" title="Repeat">
+					<button class="controlButton repeat" title="Repeat" onclick="setRepeat()">
 						<img src="assets/images/icons/repeat.png" alt="Repeat">
 					</button>
 				</div>
