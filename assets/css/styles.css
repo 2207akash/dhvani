@@ -176,10 +176,13 @@ body {
 	display: inline-block;
 	width: 100%;
 	font-size: 14px;
+	font-weight: bold;
 }
 
 #nowPlayingLeft .trackInfo .artistName {
 	font-size: 13px;
+	color: #cccccc;
+	font-weight: 700;
 }
 
 .volumeBar {

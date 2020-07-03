@@ -67,9 +67,29 @@
 		audioElement.setTime(seconds);
 	}
 
+	function nextSong() {
+		if(repeat) {
+			audioElement.setTime(0);
+			playSong();
+			return;
+		}
+
+		if(currentIndex == currentPlaylist.length - 1)
+			currentIndex = 0;
+		else
+			++currentIndex;
+
+		var trackToPlay = currentPlaylist[currentIndex];
+		setTrack(trackToPlay, currentPlaylist, true);
+	}
+
 	function setTrack(trackId, newPlaylist, play) {
 
+		currentIndex = currentPlaylist.indexOf(trackId);
+		pauseSong();
+
 		$.post("includes/handlers/ajax/getSongJSON.php", { songId: trackId }, function(data) {
+			
 			var track = JSON.parse(data);
 			$("#nowPlayingLeft .trackInfo .trackName").text(track.title);
 
@@ -142,7 +162,7 @@
 						<img src="assets/images/icons/pause.png" alt="Pause">
 					</button>
 
-					<button class="controlButton next" title="Next">
+					<button class="controlButton next" title="Next" onclick="nextSong()">
 						<img src="assets/images/icons/next.png" alt="Next">
 					</button>
 
