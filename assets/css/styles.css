@@ -175,10 +175,11 @@ body {
 	margin: 6px 0;
 	display: inline-block;
 	width: 100%;
+	font-size: 14px;
 }
 
 #nowPlayingLeft .trackInfo .artistName {
-	font-size: 12px;
+	font-size: 13px;
 }
 
 .volumeBar {

@@ -24,11 +24,18 @@
 		$.post("includes/handlers/ajax/getSongJSON.php", { songId: trackId }, function(data) {
 			var track = JSON.parse(data);
 
+			$("#nowPlayingLeft .trackInfo .trackName").text(track.title);
+
+			$.post("includes/handlers/ajax/getArtistJSON.php", { artistId: track.artist }, function(data) {
+				var artist = JSON.parse(data);
+
+				$("#nowPlayingLeft .trackInfo .artistName").text(artist.name);
+
+			});
+
 			audioElement.setTrack(track.path);
 			audioElement.play();
 		});
-
-		audioElement.setTrack("assets/music/bensound-acousticbreeze.mp3");
 		
 		if(play)
 			audioElement.play();
@@ -56,12 +63,8 @@
 					<img class="albumArtwork" src="assets/images/default-album.jpg">
 				</span>
 				<div class="trackInfo">
-					<span class="trackName">
-						Love Me Like You Do
-					</span>
-					<span class="artistName">
-						Ellie Goulding
-					</span>
+					<span class="trackName"></span>
+					<span class="artistName"></span>
 				</div>
 			</div>
 		</div>
