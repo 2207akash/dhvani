@@ -46,7 +46,7 @@
 						</div>
 
 						<div class='trackOptions'>
-							<img class='optionsButton' src='assets/images/icons/more.png'>
+							<img class='optionsButton' src='assets/images/icons/more.png' onclick='showOptionsMenu(this)'>
 						</div>
 
 						<div class='trackDuration'>
@@ -65,3 +65,10 @@
 		</script>
 	</ul>
 </div>
+
+<nav class="optionsMenu">
+	<input type="hidden" class="songId"></input>
+	<div class="item">Add to playlist</div>
+	<div class="item">Function 2</div>
+	<div class="item">Function 3</div>
+</nav>
