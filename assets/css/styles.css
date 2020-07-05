@@ -472,3 +472,7 @@ input:focus {
 #mainContent .playlistImage {
 	padding: 10px;
 }
+
+#mainContent .delete {
+	color: #000000;
+}
