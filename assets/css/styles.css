@@ -468,3 +468,7 @@ input:focus {
 #mainContent .playlistsContainer {
 	padding: 10px 0;
 }
+
+#mainContent .playlistImage {
+	padding: 10px;
+}
