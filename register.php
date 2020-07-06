@@ -36,7 +36,7 @@
 				<form class="form-group" id="loginForm" action="register.php" method="POST">
 					<h2 class="heading2">To continue, log in to Dhvani</h2>
 					<p>
-						<input class="form-control input-edit" id="loginUsername" name="loginUsername" type="text" placeholder="Email address or username" value="<?php getInputValue('loginUsername') ?>" required></input>
+						<input class="form-control input-edit" id="loginUsername" name="loginUsername" type="text" placeholder="Username" value="<?php getInputValue('loginUsername') ?>" required></input>
 					</p>
 					<p>
 						<input class="form-control input-edit" id="loginPassword" name="loginPassword" type="password" placeholder="Password" required></input>
