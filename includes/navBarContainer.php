@@ -23,7 +23,7 @@
 			</div>
 
 			<div class="navItem">
-				<span role="link" tabindex="0" onclick="openPage('profile.php')" class="navItemLink">Akash Sen</span>
+				<span role="link" tabindex="0" onclick="openPage('settings.php')" class="navItemLink"><?php echo $userLoggedIn->getFirstAndLastName() ?></span>
 			</div>
 		</div>
 	</nav>
