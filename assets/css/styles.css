@@ -496,10 +496,18 @@ input:focus {
 	color: rgba(147, 147, 147, 0.8);
 	cursor: pointer;
 	height: 40px;
+	background-color: #342b38;
+	font-size: 14px;
 }
 
 #mainContent .optionsMenu .item:hover {
 	color: #ffffff;
 	background-color: #654062;
 	border-color: #654062;
+}
+
+#mainContent .optionsMenu select {
+	border: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
 }

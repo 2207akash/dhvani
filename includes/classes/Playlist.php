@@ -55,8 +55,7 @@
 			while($row = mysqli_fetch_array($query)) {
 				$id = $row['id'];
 				$name = $row['name'];
-
-				$dropdown = $dropdown . "<option value='id'>$name</option>";
+				$dropdown = $dropdown . "<option value='$id'>$name</option>";
 			}
 
 			return $dropdown . "</select>";
